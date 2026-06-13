@@ -1,0 +1,62 @@
+{
+  "total_reviews_processed": 300,
+  "total_clusters_found": 4,
+  "clusters": [
+    {
+      "theme_name": "Trading App Issues and Feedback",
+      "actionable_ideas": [
+        "Implement a more intuitive and user-friendly interface for setting multiple stop-loss and target prices.",
+        "Reduce brokerage fees and consider offering more flexible payment options to increase user satisfaction."
+      ],
+      "representative_quotes": [
+        "use less coding, i order intraday sere order ond inoxindia for 1925 it auto exites while reaching 1941 now it went to 1919 they destroyed my 2Lakh, now if i left same thing i will get 1Lakh profit, ignore this platform,",
+        "charges are very high and all grow investors are in loss",
+        "why do you need 20 rupees of brokerage in intraday? even 5 rupees will be enough for your profits, you are greedy, how will we do intraday when your brokerage is even higher than what we can earn by intraday, make 5 rupees, and max full deduct for 1 intraday shall be somewhere from 10-15 rupees and not 100 rupees, then we can do intraday fearlessly which will also increase your profits"
+      ],
+      "cluster_id": 3,
+      "review_count": 190
+    },
+    {
+      "theme_name": "Poor User Experience",
+      "actionable_ideas": [
+        "Improve App Performance: Regularly update the app to fix bugs and improve navigation to reduce lag and improve overall user experience.",
+        "Enhance Data Security: Implement additional security measures to prevent unauthorized data sharing and protect user devices from misuse."
+      ],
+      "representative_quotes": [
+        "After using Groww every other broker apps feels hard and confusing to use.",
+        "don't use groww i wonder who is giving 4.8 rating",
+        "when you buy the stocks in groww it buys at high even though the price is not moved that much and when you sell the stocks the same experience I have experience from past 2 months and this is completely manipulating the entry and exit price"
+      ],
+      "cluster_id": 0,
+      "review_count": 37
+    },
+    {
+      "theme_name": "Ease of Use and Features",
+      "actionable_ideas": [
+        "Implement a customizable watchlist feature with adjustable positions and note-taking capabilities for alerts.",
+        "Enhance the user interface with a more attractive design and consider adding a login option without mobile number requirement."
+      ],
+      "representative_quotes": [
+        "This app is so easy to use and excellent",
+        "Super under standing very easy to identity and analysis",
+        "DON'T/ NEVER USE THIS APP , TOTALLY FROUD ALL ABOUT...... VERY SLOW AND HIDE INDICATOR"
+      ],
+      "cluster_id": 2,
+      "review_count": 32
+    },
+    {
+      "theme_name": "Poor App Performance",
+      "actionable_ideas": [
+        "Improve the app's technical platform to reduce glitches and improve overall performance.",
+        "Enhance the app's user interface to make it more user-friendly and intuitive."
+      ],
+      "representative_quotes": [
+        "Ek Num ka Ganda Aplication Hai Koi Download mat Karo Bohat Brokerage Leta . Sabse Ghatiya App hai",
+        "third class glitches ki dukan logo ke paise kharab karne ki ninza technical platform",
+        "ye new update bhut he bakwash hai jo changes huye hai vo problem create ker rhe hai aur slow feel kara rha hai"
+      ],
+      "cluster_id": 1,
+      "review_count": 15
+    }
+  ]
+}
