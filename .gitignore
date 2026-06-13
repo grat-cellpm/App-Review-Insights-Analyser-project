@@ -1,0 +1,23 @@
+# Environment variables (CRITICAL: Do not push API keys)
+.env
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Google OAuth Credentials
+mcp_server/credentials.json
+mcp_server/token.json
+
+# Temporary / Generated Data Files
+temp_normalized.json
+temp_reasoning.json
+run_history.json
+agent/raw_reviews.json
+agent/normalized_reviews.json
+agent/sample_reviews.json
+
+# IDE / System files
+.DS_Store
+.vscode/
