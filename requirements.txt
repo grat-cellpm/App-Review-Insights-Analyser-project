@@ -1,6 +1,3 @@
-fastapi
-uvicorn
-pydantic
 google-play-scraper
 pandas
 emoji
@@ -13,7 +10,3 @@ groq
 python-dotenv
 requests
 mcp
-google-auth
-google-auth-oauthlib
-google-auth-httplib2
-google-api-python-client
