@@ -1,2 +1,29 @@
+[project]
+name = "app-review-insights"
+version = "0.1.0"
+description = "App Review Insights Analyser"
+requires-python = ">=3.9"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "google-play-scraper",
+    "pandas",
+    "emoji",
+    "langdetect",
+    "scikit-learn",
+    "hdbscan",
+    "umap-learn",
+    "sentence-transformers",
+    "groq",
+    "python-dotenv",
+    "requests",
+    "mcp",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "google-api-python-client"
+]
+
 [tool.vercel]
 entrypoint = "api_bridge:app"
