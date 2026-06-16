@@ -2,7 +2,7 @@
 name = "app-review-insights"
 version = "0.1.0"
 description = "App Review Insights Analyser"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 dependencies = [
     "fastapi",
     "uvicorn",
