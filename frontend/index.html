@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Review Insights Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <div class="logo">GROWW</div>
+                
+                <div class="user-profile">
+                    <div class="avatar">
+                        <img src="https://ui-avatars.com/api/?name=Admin+Panel&background=0D8B7A&color=fff" alt="User">
+                    </div>
+                    <div class="user-info">
+                        <span class="user-name">Admin Panel</span>
+                        <span class="user-role">Data Scientist</span>
+                    </div>
+                </div>
+
+                <button class="btn-new-report">
+                    <i data-lucide="plus"></i> New Report
+                </button>
+
+                <nav class="sidebar-nav">
+                    <a href="#" class="nav-item active">
+                        <i data-lucide="pie-chart"></i> Insights
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="layout-grid"></i> Clusters
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="file-text"></i> Reports
+                    </a>
+                    <a href="#" class="nav-item">
+                        <i data-lucide="settings"></i> Settings
+                    </a>
+                </nav>
+            </div>
+
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item">
+                    <i data-lucide="help-circle"></i> Help
+                </a>
+                <a href="#" class="nav-item logout">
+                    <i data-lucide="log-out"></i> Logout
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <div class="tabs">
+                    <a href="#" id="tab-analytics" class="active">Analytics</a>
+                    <a href="#" id="tab-reports">Reports</a>
+                </div>
+                <div class="top-actions">
+                    <div class="search-bar">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search Insights...">
+                    </div>
+                    <button class="icon-btn notification-btn">
+                        <i data-lucide="bell"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Analytics View Content -->
+            <div id="analytics-view" class="content-wrapper">
+                <div class="dashboard-header">
+                    <div class="title-section">
+                        <h1>App Review <span class="gradient-text">Insights</span></h1>
+                        <p>Distilling sentiment from recent App Store feedback.</p>
+                    </div>
+                    <div class="header-actions">
+                        <button id="btn-export" class="btn-secondary">
+                            <i data-lucide="download"></i> Export
+                        </button>
+                        <button id="btn-sync" class="btn-primary">
+                            <i data-lucide="refresh-cw"></i> Sync Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- KPI Cards -->
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-info">
+                            <span class="kpi-label">TOTAL REVIEWS PROCESSED</span>
+                            <span class="kpi-value" id="kpi-total-reviews">0</span>
+                        </div>
+                        <div class="kpi-icon-wrapper outline-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-info">
+                            <span class="kpi-label">CLUSTERS FOUND</span>
+                            <span class="kpi-value" id="kpi-total-clusters">0</span>
+                        </div>
+                        <div class="kpi-icon-wrapper fill-icon">
+                            <i data-lucide="zap"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clusters Grid -->
+                <div class="clusters-grid" id="clusters-container">
+                    <!-- Cards will be dynamically injected here by JS -->
+                </div>
+            </div>
+
+            <!-- Reports View Content -->
+            <div id="reports-view" class="content-wrapper" style="display: none;">
+                <div class="dashboard-header">
+                    <div class="title-section">
+                        <h1>Generated <span class="gradient-text">Reports</span></h1>
+                        <p>History of all synced and generated weekly insights.</p>
+                    </div>
+                </div>
+                
+                <div class="reports-container" id="reports-list">
+                    <!-- Reports will be injected here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Template for Cluster Card -->
+    <template id="cluster-card-template">
+        <div class="cluster-card">
+            <div class="card-header">
+                <div class="badge-title">
+                    <span class="badge"></span>
+                    <span class="review-count"></span>
+                </div>
+                <button class="icon-btn trend-btn">
+                    <i data-lucide="trending-down" class="trend-icon"></i>
+                </button>
+            </div>
+            <h2 class="cluster-title"></h2>
+            
+            <div class="chart-container">
+                <canvas class="cluster-chart"></canvas>
+            </div>
+
+            <div class="actionable-idea-section">
+                <span class="section-label">ACTIONABLE IDEA</span>
+                <div class="idea-content">
+                    <i data-lucide="zap" class="idea-icon"></i>
+                    <p class="idea-text"></p>
+                </div>
+            </div>
+
+            <div class="quote-section">
+                <div class="quote-content">
+                    <i data-lucide="quote" class="quote-icon-small"></i>
+                    <p class="quote-text"></p>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="app.js"></script>
+</body>
+</html>
