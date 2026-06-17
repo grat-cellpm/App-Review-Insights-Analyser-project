@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                         subject: "Groww Insights: Dashboard Export"
                     };
 
-                    const response = await fetch('http://127.0.0.1:8003/api/export', {
+                    const response = await fetch('/api/export', {
                         method: 'POST',
                         headers: {
                             'Content-Type': 'application/json'
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 lucide.createIcons();
 
                 try {
-                    const response = await fetch('http://127.0.0.1:8003/api/sync', {
+                    const response = await fetch('/api/sync', {
                         method: 'POST'
                     });
                     
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 reportsList.innerHTML = '<p style="color: var(--text-secondary);">Loading reports...</p>';
                 
                 try {
-                    const res = await fetch('http://127.0.0.1:8003/api/reports');
+                    const res = await fetch('/api/reports');
                     const data = await res.json();
                     
                     if (data.history && data.history.length > 0) {

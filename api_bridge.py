@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 import os
 import uvicorn
@@ -69,5 +70,8 @@ def get_reports():
         "doc_link": f"https://docs.google.com/document/d/{doc_id}/edit" if doc_id else "#"
     }
 
+app.mount("/", StaticFiles(directory="frontend", html=True), name="frontend")
+
 if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8003)
+    port = int(os.environ.get("PORT", 8003))
+    uvicorn.run(app, host="0.0.0.0", port=port)
