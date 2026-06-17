@@ -7,6 +7,14 @@ dependencies = [
     "fastapi",
     "uvicorn",
     "pydantic",
+    "python-dotenv",
+    "requests",
+    "mcp",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "google-api-python-client",
+    "aiofiles",
     "google-play-scraper",
     "pandas",
     "emoji",
@@ -15,14 +23,7 @@ dependencies = [
     "hdbscan",
     "umap-learn",
     "sentence-transformers",
-    "groq",
-    "python-dotenv",
-    "requests",
-    "mcp",
-    "google-auth",
-    "google-auth-oauthlib",
-    "google-auth-httplib2",
-    "google-api-python-client"
+    "groq"
 ]
 
 [tool.vercel]
